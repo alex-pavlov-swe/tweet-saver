@@ -1,37 +1,48 @@
+.tweets-container {
+    border: 1px solid #eee;
+    min-height: 100vh;
+}
+
 .search-twitter-contanier {
-    border: 1px solid black;
     flex: 1;
-    margin: 10px;
+    min-height: 100vh;
+}
+
+.margin-right {
+    margin-right: 20px;
+}
+
+.margin-left {
+    margin-left: 20px;
 }
 
 .search-button-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    padding: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
     width: 100%;
 }
 
 .search-button-input {
     margin-right: 10px;
     padding: 10px;
-    width: 60%;
+    width: 80%;
 }
 
 .search-button-btn {
+    font-size: 18px;
     font-weight: 800;
     padding: 10px;
     width: 20%;
 }
 
+.search-button-btn:hover {
+    cursor: pointer;
+}
+
 .saved-tweets-container {
     border: 1px solid black;
     flex: 1;
-    margin: 10px;
-}
-
-.tweet-container {
-    border: 1px solid black;
-    padding: 10px;
     margin: 10px;
 }

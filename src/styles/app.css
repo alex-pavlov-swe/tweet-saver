@@ -12,7 +12,13 @@ code {
 }
 
 .App {
-    text-align: center;
+    margin: 20px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 40px;
+    border-bottom: 1px solid #eee
 }
 
 .app-container {

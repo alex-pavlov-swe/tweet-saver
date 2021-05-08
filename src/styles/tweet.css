@@ -1,0 +1,74 @@
+.tweet-container {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    flex-direction: row;
+    padding: 10px;
+    margin: 0;
+}
+
+.avatar-container {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.tweet-avatar {
+    border-radius: 25px;
+    max-width: 50px;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header-outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+}
+
+.username {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px;
+}
+
+.twitter-handle {
+    color: #5B7083;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.tweet-date {
+    color: #5B7083;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.text-container {
+    font-size: 15px;
+    color: #0F1419;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.tweet-delete {
+    padding: 2px;
+    color: #5B7083;;
+}
+
+.tweet-delete:hover {
+    cursor: pointer;
+}
