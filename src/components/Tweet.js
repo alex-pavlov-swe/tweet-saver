@@ -12,6 +12,23 @@ export class Tweet extends Component {
         return date.toLocaleDateString();
     }
 
+    processTweet() {
+        const { data } = this.props;
+
+        var words = data.text.split(" ");
+        var processedTweet = [];
+
+        words.forEach(word => {
+            if (word.length > 0 && word[0] == "@") {
+                processedTweet.push(`<span class="retweet">${word}</span>`);
+            } else {
+                processedTweet.push(`<span>${word}</span>`);
+            }
+        });
+
+        return processedTweet.join(" ");
+    }
+
     render() {
         const { data, removable, onRemove } = this.props;
 
@@ -38,9 +55,14 @@ export class Tweet extends Component {
                             />
                         ) : null}
                     </div>
-                    <div className="text-container">{data.text}</div>
+                    <div
+                        className="text-container"
+                        id={data.id}
+                        dangerouslySetInnerHTML={{ __html: this.processTweet() }}
+                    >
+                    </div>
                 </div>
-            </div>
+            </div >
         )
     }
 }

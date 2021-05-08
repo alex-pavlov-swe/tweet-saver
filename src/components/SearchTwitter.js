@@ -2,21 +2,22 @@ import React, { Component } from 'react';
 import Tweet from './Tweet';
 import ActivityIndicator from './ActivityIndicator';
 
-const getTweetsUrl = 'http://localhost:5001/search/tweets';
+const getTweetsUrl = 'http://159.65.73.172:5001/search/tweets';
 
 export class SearchTwitter extends Component {
     constructor(props) {
         super(props);
         this.state = {
             searchString: "",
-            tweets: JSON.parse(localStorage.getItem("searchTwitter")) || [],
+            tweets: [],
             loading: false
         }
     }
 
     componentDidMount() { }
 
-    handleSearchClick() {
+    handleSearchClick(e) {
+        e.preventDefault();
         const { searchString } = this.state;
 
         if (searchString === "") {
@@ -48,7 +49,7 @@ export class SearchTwitter extends Component {
 
         return (
             <div className="search-twitter-contanier margin-right">
-                <div className="search-button-container">
+                <form className="search-button-container">
                     <input
                         className="search-button-input"
                         placeholder="Search Twitter"
@@ -57,11 +58,12 @@ export class SearchTwitter extends Component {
                     />
                     <button
                         className="search-button-btn"
-                        onClick={() => this.handleSearchClick()}
+                        onClick={(e) => this.handleSearchClick(e)}
+                        type="submit"
                     >
                         Search
                     </button>
-                </div>
+                </form>
                 <div className="tweets-container">
                     {loading ? (<ActivityIndicator />) : tweets.map(tweet => (
                         <Tweet

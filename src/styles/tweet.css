@@ -72,3 +72,7 @@
 .tweet-delete:hover {
     cursor: pointer;
 }
+
+.retweet {
+    color: #1B95E0;
+}
