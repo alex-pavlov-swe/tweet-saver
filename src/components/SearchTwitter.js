@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Tweet from './Tweet';
 import ActivityIndicator from './ActivityIndicator';
 
-const getTweetsUrl = 'http://159.65.73.172:5001/search/tweets';
+// const getTweetsUrl = 'http://159.65.73.172:5001/search/tweets';
+const getTweetsUrl = "https://sleepy-island-56677.herokuapp.com/search/tweets";
 
 export class SearchTwitter extends Component {
     constructor(props) {
